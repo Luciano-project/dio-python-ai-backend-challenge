@@ -9,10 +9,10 @@ extrato = []
 os.system('cls')
 
 menu = "*------Menu principal------* \n \
-      \t1 - Sacar \n \
-      \t2 - Depositar \n \
-      \t3 - Visualizar Extrato \n \
-      \t0 - Sair \n\
+      \t[1] - Sacar \n \
+      \t[2] - Depositar \n \
+      \t[3] - Visualizar Extrato \n \
+      \t[0] - Sair \n\
 *--------------------------*"
 
 
