@@ -2,6 +2,7 @@ import time
 import os
 
 saque_maximo_dia=1500
+limite_vezes_saque = 3
 saldo = 0
 extrato = []
 
@@ -23,13 +24,15 @@ while True:
 
     if opcao == '1':
         valor_saque = int(input("Digite o valor a ser sacado: "))
-        if valor_saque <= 0: print("Valor inválido")
-        elif valor_saque > saldo: print("Saldo insuficiente")
-        elif valor_saque > saque_maximo_dia: print("Valor de saque excede o limite diário")
+        if valor_saque <= 0: print("Valor inválido!")
+        elif valor_saque > saldo: print("Saldo insuficiente!")
+        elif valor_saque > saque_maximo_dia: print("Valor de saque excede o limite diário!")
+        elif limite_vezes_saque == 0: print("Limite de saques diários atingido!")
         else:
             saldo -= valor_saque
             extrato.append(f"Saque: R$ {valor_saque}")
             saque_maximo_dia -= valor_saque
+            limite_vezes_saque -= 1
             os.system('cls')
             print("Saque realizado com sucesso!") 
 
