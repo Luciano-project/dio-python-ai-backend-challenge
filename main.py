@@ -24,7 +24,7 @@ while True:
 
     if opcao == '1':
         valor_saque = int(input("Digite o valor a ser sacado: "))
-        if valor_saque <= 0: print("Operação Falhou: Valor inválido!")
+        if valor_saque <= 0: print("Operação Falhou: O valor precisa ser positivo!")
         elif valor_saque > saldo: print("Operação Falhou: Saldo insuficiente!")
         elif valor_saque > saque_maximo_dia: print("Operação Falhou: Valor de saque excede o limite diário!")
         elif limite_vezes_saque == 0: print("Operação Falhou: Limite de saques diários atingido!")
