@@ -158,5 +158,5 @@ def main():
         espera()
         limpa_terminal()
 
-
-main()
+if __name__=="__main__":
+    main()
